@@ -13,6 +13,7 @@
             height: 100vh;
             margin: 0;
             background-color: #ffffff;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .container {
@@ -21,16 +22,20 @@
             gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 20px;
         }
 
         img {
-            max-width: 300px;
+            max-width: 100%; /* Allow image to resize dynamically */
+            height: auto;
             border-radius: 10px;
+            max-width: 300px; /* Limit maximum width on larger screens */
         }
 
         .text-content {
-            max-width: 400px;
+            max-width: 100%;
             text-align: center;
+            padding: 10px;
         }
 
         h1 {
@@ -87,10 +92,6 @@
 
             p {
                 font-size: 0.9em;
-            }
-
-            img {
-                max-width: 250px;
             }
 
             .buttons a {
